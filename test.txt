@@ -1,1 +1,0 @@
-Denne filen er en test ås jeg kans jekke at jeg får Git til å fungere.
