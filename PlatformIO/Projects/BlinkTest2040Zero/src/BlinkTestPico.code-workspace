@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../BlinkTestPico/BlinkTestPico"
+		},
+		{
+			"name": "BlinkTest2040Zero",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
