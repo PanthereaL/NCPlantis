@@ -27,6 +27,7 @@ void setup() {
   logFile = SD.open("fuktlog.txt", FILE_WRITE);
   logFile.println("index,sensor1,sensor2");
   logFile.close();
+  delay(1000); //Waits for a second jsut to amke sure everything is powered.
 }
 
 void loop() {
@@ -41,7 +42,12 @@ void loop() {
     String(sensorReading[0])+","+
     String(sensorReading[1])
     );
-  
+
+  Serial.println(
+    String(myIndex)+","+
+    String(sensorReading[0])+","+
+    String(sensorReading[1])
+    );
   logFile.close();
   myIndex++;
   delay(1800000); //wait for half an hour.
