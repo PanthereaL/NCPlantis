@@ -11,9 +11,9 @@ unsigned long myIndex = 0;
 
 void setup() {
   Serial.begin(9600);
-  while (!Serial)
-    ;
-  {};
+  if (!Serial) {
+    delay(500); //Waits half a second for Serial to get set up.
+  }
 
   Serial.println("Initializing SD card...");
   if (!SD.begin(SS)) {
@@ -27,7 +27,7 @@ void setup() {
   logFile = SD.open("fuktlog.txt", FILE_WRITE);
   logFile.println("index,sensor1,sensor2");
   logFile.close();
-  delay(1000); //Waits for a second jsut to amke sure everything is powered.
+  delay(1000);  //Waits for a second jsut to amke sure everything is powered.
 }
 
 void loop() {
@@ -38,17 +38,11 @@ void loop() {
 
   logFile = SD.open("fuktlog.txt", FILE_WRITE);
   logFile.println(
-    String(myIndex)+","+
-    String(sensorReading[0])+","+
-    String(sensorReading[1])
-    );
+    String(myIndex) + "," + String(sensorReading[0]) + "," + String(sensorReading[1]));
 
   Serial.println(
-    String(myIndex)+","+
-    String(sensorReading[0])+","+
-    String(sensorReading[1])
-    );
+    String(myIndex) + "," + String(sensorReading[0]) + "," + String(sensorReading[1]));
   logFile.close();
   myIndex++;
-  delay(1800000); //wait for half an hour.
+  delay(1800000);  //wait for half an hour.
 }
