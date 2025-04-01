@@ -4,9 +4,10 @@
 File logFile;
 
 //Pin definitions
-int SENSOR_PIN[] = { A0, A1 };
+int SENSOR_PIN[] = { A0};
+int BUZZER_PIN = 21;
 
-int sensorReading[2];
+int sensorReading[1];
 unsigned long myIndex = 0;
 
 void setup() {
@@ -25,24 +26,30 @@ void setup() {
   }
 
   logFile = SD.open("fuktlog.txt", FILE_WRITE);
-  logFile.println("index,sensor1,sensor2");
+  logFile.println("index,sensor1");
   logFile.close();
   delay(1000);  //Waits for a second jsut to amke sure everything is powered.
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  for (int i = 0; i < 2; i++) {
+  for (int i = 0; i < 1; i++) {
     sensorReading[i] = analogRead(SENSOR_PIN[i]);
   }
 
   logFile = SD.open("fuktlog.txt", FILE_WRITE);
   logFile.println(
-    String(myIndex) + "," + String(sensorReading[0]) + "," + String(sensorReading[1]));
+    String(myIndex) + "," + String(sensorReading[0]));
 
   Serial.println(
-    String(myIndex) + "," + String(sensorReading[0]) + "," + String(sensorReading[1]));
+    String(myIndex) + "," + String(sensorReading[0]));
   logFile.close();
+
+  tone(BUZZER_PIN, 500, 200);
+  delay(350);
+  tone(BUZZER_PIN, 500, 200);
+  delay(350);
+  tone(BUZZER_PIN, 500, 200);
   myIndex++;
-  delay(1800000);  //wait for half an hour.
+  delay(3600000);  //wait for half an hour.
 }
