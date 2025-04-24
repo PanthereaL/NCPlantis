@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+
+nav{
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 300px;
+    height: auto;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--black); 
+    font-weight: 600;
+}
+.Follow-Us{
+    display: inline;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #333;
+    background-image: linear-gradient(45deg, var(--red), #c430d7);
+    font-size: 14px;
+    border-radius: 35px;
+    border-top-right-radius: 0;
+}
+.Follow-Us:hover{
+    border-top-right-radius: 30px;
+    background-image: linear-gradient(45deg, #e100ff, var(--red));
+}
+
+.banner{
+    width: auto;
+    height: 700vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 40s linear infinite;
+}
+
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity))*1deg))
+        translateZ(550px);
+        text-align: center;
+    
+}
+.banner .slider .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease;
+}
+.banner .slider .item:hover img {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); 
+    border-color: #c430d7;
+}
+.banner .slider .item .info {
+    display: block;
+    margin-top: 1px; 
+    font-size: 1em; 
+    color: #25283b;
+    font-family: 'ICA Rubrik', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.banner .slider .item .info a.linkedin {
+    display: inline-block; 
+    margin-top: 5px; 
+    text-decoration: none; 
+}
+
+.banner .slider .item .info a.linkedin img.linkedin-logo {
+    width: 30px;
+    height: auto; 
+    transition: transform 0.2s ease; 
+}
+
+.banner .slider .item .info a.linkedin img.linkedin-logo:hover {
+    transform: scale(1.2); 
+}
+.banner .content{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+.banner .content h1{
+    font-family: 'ICA Rubrik';
+    font-size: 8em;
+    line-height: 1em;
+    color: #25283b;
+}
+.banner .content author{
+    font-family: 'ICA Rubrik';
+    text-align: right;
+    line-height: 1em;
+    max-width: 200px;
+}
+.banner .content author h2{
+    font-family: 'ICA Rubrik';
+    font-size: 1.2em;
+    line-height: 1em;
+    color: #25283b;
+}
+.banner .content author p{
+    font-family: 'ICA Rubrik';
+    font-size: 1.2em;
+    line-height: 7em;
+    color: #25283b;
+}
+.banner .content h2{
+    font-size: 4em;
+    color: #25283b;
+}
+.banner .content p{
+    font-size: 1.2em;
+    color: #25283b;
+}

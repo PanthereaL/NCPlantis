@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Grunnleggende innstillinger for nettsiden -->
+    <meta charset="UTF-8"> <!-- Angir tegnsett -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gjør nettsiden mobilvennlig -->
+    <title>iGluee Team</title> <!-- Tittel som vises i nettleserfanen -->
+    
+    <!-- Kobler nettsiden til CSS-filer for styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Hovedseksjonen på nettsiden -->
+    <div class="hero anim">
+        <!-- Navigasjonsmeny øverst -->
+        <nav>
+            <!-- Logoen som lenker til startsiden -->
+            <a href="index.html">
+                <img src="Bilder/logo.png" class="logo" alt="iGluee Logo">
+            </a>
+            <!-- Menyelementer for navigasjon -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Seksjonen for animert banner med bilder av teammedlemmer -->
+        <div class="banner">
+            <div class="slider" style="--quantity: 6">
+                
+                <!-- Hvert medlem har sitt eget bilde og info -->
+                <div class="item" style="--position: 1;">
+                    <img src="Bilder/Lars.png" alt=""> <!-- Bildet til Lars -->
+                    <span class="info">Lars Iver Heggem<br><small>Software Engineer</small></span> <!-- Navn og tittel -->
+                </div>
+
+                <div class="item" style="--position: 2;">
+                    <img src="Bilder/Bjornar.png" alt=""> <!-- Bildet til Bjørnar -->
+                    <span class="info">Bjørnar Brenna Aase<br>Mechanical Engineer</span> <!-- Navn og tittel -->
+                </div>
+
+                <div class="item" style="--position: 3;">
+                    <img src="Bilder/Haaamsa.png" alt=""> <!-- Bildet til Hamsa -->
+                    <span class="info">Hamsa Hashi<br>Software Engineer</span>
+                    <!-- Lenke til Hamsas LinkedIn -->
+                    <a href="https://www.linkedin.com/in/hamsa-hashi-7a7b7322b/" target="_blank" class="linkedin">
+                        <img src="Bilder/linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                    </a>
+                </div>
+
+                <div class="item" style="--position: 4;">
+                    <img src="Bilder/Magda.png" alt=""> <!-- Bildet til Magdalena -->
+                    <span class="info">Magdalena Maria Szczerba<br>Software Engineer</span>
+                </div>
+
+                <div class="item" style="--position: 5;">
+                    <img src="Bilder/Rebekka.png" alt=""> <!-- Bildet til Rebekka -->
+                    <span class="info">Rebekka Løvetannhjerte<br>Electrical Engineer</span>
+                </div>
+
+                <div class="item" style="--position: 6;">
+                    <img src="Bilder/Ole.png" alt=""> <!-- Bildet til Ole -->
+                    <span class="info">Ole Gabriel Foss Sjulstad<br>Mechanical Engineer</span>
+                    <!-- Lenke til Oles LinkedIn -->
+                    <a href="https://www.linkedin.com/in/ole-foss/" target="_blank" class="linkedin">
+                        <img src="Bilder/linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                    </a>
+                </div>
+            </div>
+            <!-- Innholdsseksjon med overskrift og beskrivelse -->
+            <div class="content">
+                <h1>Meet the Team</h1>
+                <p>Get to know the faces behind the project! Our team is made up of six talented students from the University of Kongsberg, each bringing their own unique skills and expertise to the table.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seksjonen for forfatterinfo og universitet -->
+    <div class="author">
+        <h2>Team iGluee</h2>
+        <p><b>University of South-Eastern Norway</b></p>
+        <p>A Multidisciplinary Team Collaborating for Excellence</p>
+    </div>
+
+</body>
+</html>

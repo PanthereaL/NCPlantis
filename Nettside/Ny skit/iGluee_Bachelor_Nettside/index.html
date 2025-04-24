@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Angir tegnsett og tilpasser nettsiden for mobilvennlighet -->
+    <meta charset="UTF-8"> <!-- nettt siden er egentlig på engenslk men flere språk fungerer ved utf8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Tittel som vises i nettleserfanen øverst -->
+    <title>iGluee</title>
+    
+    <!-- Kobler nettsiden til CSS-filen for styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- (PS!!: vi må endre senere Dette skal være en CSS-fil. Hvis det ikke er en CSS-fil, må denne lenken fjernes eller korrigeres) -->
+    <link rel="stylesheet" href="about.html">
+</head>
+
+<body>
+    <!-- Hovedseksjonen som inneholder navigasjon, tekst, og video -->
+    <div class="hero anim"> 
+        <!-- Navigasjonsmeny øverst på siden -->
+        <nav>
+            <!-- Logo som lenker til hjemmesiden når vi trykker -->
+            <a href="index.html">
+                <img src="Bilder\logo.png" class="logo">
+            </a>
+
+            <!-- Menyvalg for navigering til forskjellige deler av nettsiden -->
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="about.html"> About us </a></li>
+                <li><a href="contact.html"> Contact </a></li>
+            </ul>
+
+            <!-- Lenke til Instagram-proflen med knappdesign -->
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/igluue_b25/?utm_source=qr&igsh=bWpvdWZkaGV2dXAx#" 
+                           class="Follow-Us anim" 
+                           target="_blank" 
+                           rel="noopener noreferrer">
+                           Follow Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Seksjjon for innhold, overskrift og beskrivelse -->
+        <div class="content anim">
+            <h1 class="anim">Timeline<br>for the Project</h1>
+            <p class="anim">Stay in the loop with our Bachelor project's journey! Check out the
+                timeline to explore each milestone and stay updated on our exciting progress.</p>
+            
+            <!-- Knapp som lenker til Jira-prosjekttidslinjen -->
+            <a href="#jira.html" class="btn anim">Track Progress</a>
+        </div>
+
+        <!-- Seksjon for video -->
+        <div class="video">
+            <video autoplay loop muted width="640" height="360">
+                <!-- Kilde til videofilen -->
+                <source src="Bilder/duo.mp4" type="video/mp4">
+                <!-- Meldingen som vises hvis nettleseren ikke støtter videospilleren -->
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Animasjon med "bubbles" som svever på siden -->
+    <div class="bubbles">
+        <!-- Bildene som brukes som bobler i animasjonen -->
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+        <img src="Bilder\bubble.png" class="bubbles">
+    </div>
+
+</body>
+</html>
