@@ -1,0 +1,54 @@
+.mediaRight {
+    background-image: url('src/textures/gradient_green.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mediaRight .text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.mediaRight img {
+    max-height: 200px;
+    width: auto;
+}
+
+.mediaLeft {
+    background-image: url('src/textures/gradient_green.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.mediaLeft .text {
+    flex: 1;
+    margin-left: 20x;
+}
+
+.mediaLeft img {
+    max-height: 200px;
+    width: auto;
+}
+
+body{
+    background-color: rgb(32, 79, 50);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo img {
+    max-height: 150px;
+    width: auto;
+}
+
+header {
+    display: flex;
+}
