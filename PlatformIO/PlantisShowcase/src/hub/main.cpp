@@ -20,20 +20,18 @@ void setup() {
   } else {
     Serial.println("Failed to initialize radio tranceiver.");
   }
-  radio.openWritingPipe(address);
+  radio.openReadingPipe(0, address);
   radio.setPALevel(RF24_PA_LOW);
-  radio.stopListening();
+  radio.startListening();
 }
 
 void loop() {
-  const char text[] = "Hello RF!";
-  bool success = radio.write(&text, sizeof(text));
-  if (success) {
-    Serial.println("Sent successfully");
-  } else {
-    Serial.println("Failed to send.");
+  
+  if (radio.available()) {
+    char text[32] = "";
+    radio.read(&text, sizeof(text));
+    Serial.println(text);
   }
-  delay(500);
 }
 
 // put function definitions here:
