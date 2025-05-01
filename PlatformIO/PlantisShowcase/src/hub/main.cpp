@@ -1,6 +1,14 @@
 #include <Arduino.h>
 #include "SPI.h"
 #include "RF24.h"
+#include <Adafruit_GFX.h>
+#include <Adafruit_ST7789.h>
+
+#define TFT_CS 13
+#define TFT_RST 11
+#define TFT_DC 10
+
+Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
 RF24 radio (20, 21); //CE, CNS
 
@@ -13,6 +21,7 @@ const byte test[6] = "00002";
 void setup() {
   Serial.begin(9600);
   delay(2000);
+
   Serial.println("Serial opened");
   bool connected = radio.begin(); 
   if (connected) {
@@ -23,6 +32,13 @@ void setup() {
   radio.openReadingPipe(0, address);
   radio.setPALevel(RF24_PA_LOW);
   radio.startListening();
+
+  tft.init(240, 320, SPI_MODE1);
+  tft.fillScreen(ST77XX_BLACK);
+  tft.setCursor(20, 40);
+  tft.setTextColor(ST77XX_WHITE);
+  tft.setTextSize(2);
+  tft.print("Hello, Pico!");
 }
 
 void loop() {
