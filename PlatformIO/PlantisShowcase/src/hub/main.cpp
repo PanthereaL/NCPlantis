@@ -4,18 +4,15 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7789.h>
 
-#define TFT_CS 13
-#define TFT_RST 11
-#define TFT_DC 10
+#define TFT_CS 16
+#define TFT_RST 23
+#define TFT_DC 22
 
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
-RF24 radio (20, 21); //CE, CNS
+RF24 radio (0, 17); //CE, CNS
 
-int MOISTURE_SENSOR_PIN = A0;
-int LIGHT_SENSOR_PIN1 = A1;
 const byte address[5] = {'0', '0', '0', '0', '1'};
-const byte test[6] = "00002";
 // put function declarations here:
 
 void setup() {
@@ -33,12 +30,13 @@ void setup() {
   radio.setPALevel(RF24_PA_LOW);
   radio.startListening();
 
-  tft.init(240, 320, SPI_MODE1);
+  tft.init(240, 320, SPI_MODE2);
+  tft.invertDisplay(false);
   tft.fillScreen(ST77XX_BLACK);
   tft.setCursor(20, 40);
   tft.setTextColor(ST77XX_WHITE);
   tft.setTextSize(2);
-  tft.print("Hello, Pico!");
+  tft.print("Hello, ESP!");
 }
 
 void loop() {

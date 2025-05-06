@@ -23,6 +23,7 @@ void setup(void) {
   digitalWrite(TFT_BLK,HIGH);
   
   tft.init(240, 320, SPI_MODE2);
+  tft.invertDisplay(true);
   tft.fillScreen(ST77XX_BLACK);
 
 }
