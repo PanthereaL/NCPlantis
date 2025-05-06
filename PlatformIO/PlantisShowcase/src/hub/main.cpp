@@ -13,7 +13,17 @@ Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 RF24 radio (0, 17); //CE, CNS
 
 const byte address[5] = {'0', '0', '0', '0', '1'};
+
+
 // put function declarations here:
+void printToScreen(
+  const char* tekst, 
+  uint16_t x, 
+  uint16_t y, 
+  uint16_t textSize, 
+  uint16_t textColor, 
+  uint16_t bgColor
+);
 
 void setup() {
   Serial.begin(9600);
@@ -45,7 +55,27 @@ void loop() {
     char text[32] = "";
     radio.read(&text, sizeof(text));
     Serial.println(text);
+    printToScreen(text);
   }
+  delay(200);
+  printToScreen("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  delay(500);
 }
 
 // put function definitions here:
+
+void printToScreen(
+  const char *text, 
+  uint16_t x = 20, 
+  uint16_t y = 40, 
+  uint16_t textSize = 1, 
+  uint16_t textColor = ST77XX_WHITE, 
+  uint16_t bgColor = ST77XX_BLACK
+)
+{
+  tft.fillScreen(bgColor);
+  tft.setCursor(x,y);
+  tft.setTextColor(textColor);
+  tft.setTextSize(textSize);
+  tft.print(text);
+}
