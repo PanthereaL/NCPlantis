@@ -61,7 +61,16 @@ void loop() {
   }
 
   std::string text = std::to_string(moistRead);
-  bool success = radio.write(&text, sizeof(text));
+  bool success = false;
+  int sendCounter = 0;
+  int maxSends = 20;
+  while(!success) {
+    success = radio.write(&text, sizeof(text));
+    sendCounter++;
+    if(sendCounter>maxSends){
+      break;
+    }
+  }
   if (success) {
     Serial.println("Sent successfully");
   } else {

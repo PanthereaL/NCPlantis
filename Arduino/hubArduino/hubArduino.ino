@@ -32,6 +32,7 @@ void setup() {
   delay(2000);
 
   Serial.println("Serial opened");
+  
   bool connected = radio.begin(); 
   if (connected) {
     Serial.println("Successfully initialized radio tranceiver.");
