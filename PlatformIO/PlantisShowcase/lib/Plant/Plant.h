@@ -9,15 +9,16 @@
 enum MoistureLevel {
     VERY_DRY,
     DRY,
-    MEDIUM,
+    MEDIUM_MOIST,
     WET,
-    VERY_WET
+    VERY_WET,
+    NUM_STATES //A functional element to allow easier rolling. It should not show up or be set explicitly.
 };
 
 enum LightLevel {
     VERY_DARK,
     DARK,
-    MEDIUM,
+    MEDIUM_LIGHT,
     BRIGHT,
     VERY_BRIGHT
 };

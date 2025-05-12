@@ -13,7 +13,7 @@
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 RF24 radio (0, 17); //CE, CNS
 
-Plant myPlant("Monstera", LightLevel::MEDIUM, MoistureLevel::MEDIUM);
+Plant myPlant("Monstera", MEDIUM_LIGHT, MEDIUM_MOIST);
 
 const byte address[5] = {'0', '0', '0', '0', '1'};
 
