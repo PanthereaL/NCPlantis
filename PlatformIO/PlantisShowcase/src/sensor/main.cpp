@@ -22,6 +22,22 @@ int RGB_PINS[4][3] = {  //Pins for the RGB leds, sorted {R,G,B}.
   {11,12,13}
 };
 
+enum OutputState {
+  WATER,
+  LIGHT,
+  BATTERY,
+  NUM_STATES
+};
+
+enum OutputLevel { 
+  VERY_LOW, //Corresponds to 0-25%
+  LOW, //Corresponds to 25-50%
+  MEDIUM,
+  HIGH, // Corresponds to 50-75%
+  VERY_HIGH, //Corresponds to 75-100%
+  NUM_STATES
+};
+
 bool newInstructions = false;
 uint16_t currTime;
 
@@ -31,6 +47,8 @@ int readLight(int enable, int read);
 void radioInit(const byte addr[6]);
 bool radioSend(std::string text);
 void menuStart(Plant plant);
+void inputControl(Plant plant);
+void outputStart(Plant plant);
 
 void setup() {
   Serial.begin(9600);
@@ -63,21 +81,25 @@ void loop() {
   Serial.println(myPlant.currentMoistureValue, myPlant.currentLightValue);
 
   if (newInstructions) {
-    //radioSend("Mode two");
-    //radioSend(/*New instructions*/"");
+    radioSend("Mode two");
+    radioSend(std::to_string(myPlant.preferredMoistureLevel));
+    radioSend(std::to_string(myPlant.preferredLightLevel));
+    newInstructions = false;
   } else {
-    //radioSend("Mode one");
+    radioSend("Mode one");
   }
   radioSend(std::to_string(myPlant.currentMoistureValue)); //unknown time
   radioSend(std::to_string(myPlant.currentLightValue)); //unknown time
 
   while(millis() < currTime + 1800000) {
-    //Time to do menu stuff
+    if (digitalRead(BUTTON_PIN_SELECT)) {
+      //inputControl(myPlant);
+    }
   }; //1800 sekunder, 30 minutter
 }
 
 // put function definitions here:
-int readMoisture(int enable, int read) {
+int readMoisture(int enable, int read){
   digitalWrite(enable,HIGH);
   delay(10000); //Let the sensor wake up
   int reading = analogRead(read); //Just in case reading clears something up, the first reading tends to be garbage
@@ -86,7 +108,7 @@ int readMoisture(int enable, int read) {
   return reading;
 }
 
-int readLight(int enable, int read) {
+int readLight(int enable, int read){
   digitalWrite(LIGHT_SENSOR_ENABLE_PIN,HIGH);
   delay(200); //Let the sensor warm up. I don't know if this is enough
   int reading = analogRead(LIGHT_SENSOR_PIN1);
@@ -106,7 +128,7 @@ void radioInit(const byte addr[6]){ //This should ideally be brought out into a 
   radio.stopListening();
 }
 
-bool radioSend(std::string text) { //This should ideally be brought out into a Radio module
+bool radioSend(std::string text){ //This should ideally be brought out into a Radio module
   bool success = false;
   int sendCounter = 0;
   int maxSends = 20;
@@ -180,8 +202,63 @@ void menuStart(Plant plant){
   } else {
     plant.preferredLightLevel = lSetting;
     plant.preferredMoistureLevel = mSetting;
+    newInstructions = true;
     //Two green blinks
     return;
   }
 
+}
+
+void inputControl(Plant plant){
+  uint32_t referenceTime = millis();
+  while(digitalRead(BUTTON_PIN_SELECT) && millis() < referenceTime + 500) {
+  }
+  if (digitalRead(BUTTON_PIN_SELECT)) {
+    menuStart(plant);
+  } else {
+    outputStart(plant);
+  }
+}
+
+void outputStart(Plant plant){
+  uint32_t referenceTime = millis();
+  OutputState state = WATER;
+  OutputLevel waterLevel;
+  OutputLevel batteryLevel;
+  OutputLevel lightLevel;
+  while (millis() < referenceTime + 10000) //10 second timeout
+  {
+    //state decides light color, and which output level to display
+    //pressing plus or minus changes state
+    switch (state)
+    {
+    case WATER: //Not sure a switch case is the best way to handle this. Or even a good one.
+      switch (waterLevel)
+      {
+      case VERY_LOW:
+        //LED1 RGB_BLUE_FLASH
+        break;
+      
+      case LOW:
+        //LED1 RGB_BLUE_ON
+        //LED2 RGB_BLUE_FLASH
+        break;
+      
+      default:
+        break;
+      }
+      break;
+    
+    default:
+      break;
+    }
+  }
+  return;
+  //Blue lights indicative of water level, current sector flashes, sectors under are lit, sectors over are dark
+  //+
+  //Yellow lights indicate light level
+  //+
+  //Green lights indicate battery level
+  //+
+  //Blue lights etc.
 }

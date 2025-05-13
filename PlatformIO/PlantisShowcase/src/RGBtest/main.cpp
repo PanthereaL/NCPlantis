@@ -21,6 +21,6 @@ void loop() {
         digitalWrite(RGB_RED,i & 0b100);
         digitalWrite(RGB_GREEN, i & 0b010);
         digitalWrite(RGB_BLUE, i & 0b001);
-        delay(500);
+        delay(1000);
     }
 }
