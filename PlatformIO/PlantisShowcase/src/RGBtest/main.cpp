@@ -14,6 +14,7 @@ void setup() {
     pinMode(RGB_RED,OUTPUT);
     pinMode(RGB_GREEN,OUTPUT);
     pinMode(RGB_BLUE,OUTPUT);
+    pinMode(LED_BUILTIN,OUTPUT);
 }
 
 void loop() {
@@ -21,6 +22,7 @@ void loop() {
         digitalWrite(RGB_RED,i & 0b100);
         digitalWrite(RGB_GREEN, i & 0b010);
         digitalWrite(RGB_BLUE, i & 0b001);
+        digitalWrite(LED_BUILTIN, i & 0b001);
         delay(1000);
     }
 }
