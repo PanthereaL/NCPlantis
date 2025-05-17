@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="0904E05A-9DDB-4600-A16C-4F558E72EC8C">
+            <Title>Teknisk Mine Korte Notater</Title>
+            <Text>Teknisk utført arbeid har stort sett vært å legge til rette for tester av sensorer og analysere dataene. Mye tid har gått til å bli venn med verktøy som Arduino IDE og VSC, finne ut av hvordan de forskjellige mikrokontrollerne våre fungerer, og å utforske måter å forbedre arbeidsflyten.
+Arduino IDE fungerte til det meste, men ble vanskelig å bruke etter hvert, siden den ikke støtter bruk av mappestrukturer for å organisere koden i flere filer eller automatisk utfylling av kode. Den fungerte derimot veldig bra til å laste opp kode til de forskjellige mikrokontrollerne.
+Arduino IDE egner seg ikke så godt til mer kompliserte prosjekter med flere enheter, siden hver skisse har sin egen mappe og egendefinerte moduler må kopieres inn i hver enkelt mappe. Det blir mye repetisjon og dobbeltarbeid.
+VSC med PlatformIO er et bedre alternativ, men læringskurven er veldig bratt når man ikke har satt det opp på egenhånd før. VSC er en lettvektseditor, men med mange plugins som utvider funksjonaliteten, men også øker kompleksiteten for uerfarne brukere, som meg.
+Bruk av forskjellige mikrokontrollere med forskjellige behov og chiparkitektur gjør det nødvendig å ha forskjellige konfigurasjoner for hvert brett. I ettertid har jeg funnet at PlatformIO gjør dette på en god måte når jeg lager alle skissene inne i samme prosjektet.
+Å balansere mellom å lære nye måter å sette opp arbeidsstasjonen og å få gjennomført kodeoppgaver for å gjøre klar for tester har lent tungt mot å få testene til å fungere fremfor å bygge en god, gjenbrukbar kodebase og å forstå arbeidsmiljøet for best mulig effekt. Ønsket er å ha et miljø med fleksibilitet og oversikt, men virkeligheten har vært å halse etter for å få ting til å fungere i stedet for å kunne sette seg inn i nye verktøy.
+</Text>
+        </Document>
+        <Document ID="1A8300DD-A26C-4F21-BE0A-C13B9DA48D27">
+            <Title>Tidslinjenotat Uke 5 Copilot</Title>
+            <Text>Uke 5 – Utvikling av rammeverk, nettsideoppsett og konseptualisering
+Denne uken etablerte jeg standardiserte maler for organiseringen av C++-pakker, og oppsettene av .cpp- og .h-filer. Målet var å sikre en konsekvent og effektiv opprettelse av kodemoduler, noe som legger grunnlaget for jevn prosjektflyt og vedlikehold.
+Videre gikk jeg gjennom korrespondansen fra Karoline for å finne anbefalinger om oppsett av nettside. Basert på dette utviklet jeg en enkel men funksjonell nettside, inkludert en “Om oss”-seksjon. Denne siden ble så publisert på det domenet vi har blitt tildelt.
+I tillegg ble alle tilgjengelige mikrokontroller-typer, tidligere anskaffet av Thomas og Joachim, raskt gjennomgått. Ved å laste opp grunnleggende testkode til hver enhet kunne jeg verifisere operabiliteten og sikre kompatibilitet mellom hardwaren og den pågående firmwareutviklingen.
+I samarbeid med Thomas og Joachim bekreftet jeg behovet for at Plantis-enhetene skal benytte trådløs kommunikasjon for integrasjon med tilknyttede søsterenheter. Denne beslutningen er viktig for den videre arkitekturen av systemet.
+For å hente inn et eksternt perspektiv tok jeg også kontakt med en potensiell testbruker med omfattende erfaring innen plantepleie. Dennes innsikten forventes å være av stor verdi når vi skal kalibrere systemet og identifisere mulige forbedringsområder.
+Til slutt hadde vi en større strategisk retningsendring etter veiledermøte med John. Prosjektets omfang ble justert fra å utvikle et fullstendig integrert plantepleiesystem, til å skille ut planlagt funksjonalitet i separate produkter, og fokusere på å utvikle en sensorbasert enhet. Denne enheten skal primært indikere for kunden om plantens vannbehov er tilstrekkelig dekket. I forbindelse med denne endringen, under et uformelt kaffemøte, ble det diskutert navn og funksjonelle konsepter for de forskjellige produktene. 
+Jeg utarbeidet også et konseptuelt design for vann- og lysindikatorer, illustrert med maskoten “Buddy”, som per dags dato er på konseptstadiet.</Text>
+        </Document>
+        <Document ID="4101F948-1981-4D65-A7F0-9C177396F383">
+            <Title>Teknisk Copilot Utvidelse 2</Title>
+            <Text>Evaluering av Mikrokontrollere
+Prosjektet omfatter et bredt utvalg mikrokontrollere – med Arduino, Raspberry Pi og ESP32 som basiselementer. Alle de tre plattformene kan programmeres i C++ via Arduino IDE, noe som forenkler den initielle utviklingsprosessen ved at den samme kodestrukturen kan benyttes på tvers av enhetene. Det er imidlertid viktig å påpeke at en universell kode ikke nødvendigvis utnytter den enkelte plattforms fulle potensial, og optimaliseringer vil ofte være påkrevd.
+Forslag til illustrasjon:
+Figur 1: Et flytskjema som illustrerer hvordan basis C++-kode implementeres på hver mikrokontroller. Dette kan vise de felles utgangspunkt og nødvendige tilpasninger for hver plattform. 
+Raspberry Pi-baserte Kort og MicroPython
+Raspberry Pi-baserte enheter (som for eksempel Raspberry Pi Pico) tilbyr en deep sleep-funksjon som potensielt kan forlenge batterilevetiden drastisk. Foreløpige tester antyder at ved å utnytte denne funksjonen – ved å programmere enhetene i MicroPython, en lettvektsvariant av Python tilpasset mikrokontrollere – kan batteritiden økes fra omtrent 11 timer til opptil 3000 timer i hvilemodus. Det må imidlertid understrekes at disse tallene bør verifiseres nøye, og at overgangen fra C++ til MicroPython medfører en ny læringskurve samt behov for å etablere nye verktøysett for koding. Videre må kompatibiliteten av MicroPython vurderes på tvers av de ulike maskinvarekombinasjonene, slik at potensielle utfordringer ved kodeomstilling og systemintegrasjon identifiseres tidlig.
+Forslag til illustrasjon:
+Figur 2: Et søylediagram som sammenligner estimert batterilevetid med og uten bruk av deep sleep via MicroPython.
+Figur 3: En tabelloversikt med sammenligning av de tekniske aspektene ved implementasjon mellom C++ og MicroPython (for eksempel utviklingsverktøy, læringskurve og systemkompatibilitet). 
+Arduino-baserte Kontroller
+Arduino-plattformene som benyttes i prosjektet opererer ved et logikknivå på 5V og medfører visse begrensninger med hensyn til avanserte funksjoner. Spesielt mangelen på innebygde søvnfunksjoner og en integrert sanntidsklokke innebærer at det er vanskelig å implementere tidssensitive funksjoner og strømsparingsmoduser på samme måte som for andre plattformer. Dette resulterer i ekstra utfordringer når det gjelder å oppnå en effektiv og energibesparende drift i applikasjoner der disse egenskapene er kritiske.
+Forslag til illustrasjon:
+Figur 4: En tabell som sammenligner sentrale egenskaper for Arduino-kontrollere (5V logikknivå, manglende søvnfunksjonalitet og fravær av sanntidsklokke) med de andre plattformene. 
+ESP32: Kraft og Fleksibilitet
+ESP32 fremstår som en kraftig og fleksibel mikrokontroller, mye benyttet i integrerte systemer og IoT-applikasjoner. Den kombinerer relativt lav pris med høy ytelse og har fremfor alt et sterkt kommunikasjonstilbud gjennom støtte for BlueTooth, WiFi og radio. Den kompakte formfaktoren bidrar også til et økt praktisk utbytte ved implementering i små, integrerte systemer. Denne mikrokontrolleren veier dermed opp for eventuelle begrensninger knyttet til søvnfunksjoner ved at den tilbyr robust kommunikasjon og systemintegrasjon.
+Forslag til illustrasjon:
+Figur 5: Et diagram over ESP32 sin arkitektur med fremheving av de kommunikasjonsmodulene som gjør den egnet for tilkoblingsoppgaver (f.eks. BlueTooth, WiFi, radio).
+Figur 6: En sammenligningstabell som visualiserer de viktigste tekniske egenskapene (tilkoblingsmuligheter, formfaktor, ytelse) på tvers av ESP32, Arduino og Raspberry Pi-baserte enheter. 
+Denne evalueringen understreker at til tross for initial forenkling ved bruk av et felles programmeringsmiljø (C++ med Arduino IDE), krever de ulike mikrokontrollerne tilpassede strategier for optimal bruk. Ved å benytte MicroPython for Raspberry Pi-baserte enheter åpnes for betydelige strømsparegevinster, men samtidig innføres nye krav til opplæring og verktøytilpasning. Arduino-kontrollerne, med sine begrensninger, utfordrer designet imot løsninger for tidsstyrte funksjoner, mens ESP32 med sine omfattende kommunikasjonsmuligheter står frem som en kraftig og allsidig plattform.</Text>
+        </Document>
+        <Document ID="AA3924FF-26BB-4640-91CC-D4FFD1D841FE">
+            <Title>Lagret fra gamle rapportdokumentet</Title>
+            <Text>Dataarbeidet har i all hovedsak dreid seg om å legge til rette for sensortester, og påfølgende dataanalyse. Det er flere forskjellige mikrokontrollere som er kjøpt inn til formålet, med sine forskjellige behov og særegenheter når det kommer til hvordan de vil programmeres og hvilke funksjoner de kan benytte. Mye tid har gått til å bli venner med de forskjellige systemene, og undersøke måter å forbedre utviklingsprosessen.
+Arduino IDE har vist seg å være den plattformen som med størst grad av suksess har klart å programmere de forskjellige mikrokontrollerne, inkludert de som bruker en UF2 bootloader til å flashe koden til minnet. Et problem med den dessverre er at den ikke støtter eksterne filer i andre mapper enn inneværende prosjekts hovedmappe. Dette gjør det veldig vanskelig å bygge og vedlikeholde modulbasert kode på tvers av skisser, selv om den støtter inkludering av .h og .cpp-filer. Hvis en skisse da inkluderer mange egendefinerte moduler, spesielt hvis disse har flere lag med dependencies, vil alle disse ligge flatt i samme mappe som hovedskissa, som gjør det vanskelig å navigere mellom og gjøre endringer der koden ligger.
+Den første editoren som ble brukt i prosessen var Arduino IDE, en enkel plattform for å skrive og laste opp kode basert på C++, som viste seg kompatibel med alle de innkjøpte mikrokontrollerne, og kunne med riktig konfigurering laste opp direkte til brettene, på tross av at noen av dem i dokumentasjonen er opplyst om at opplastningsprosedyre er å åpne bootloaderen og overføre en kompilert fil manuelt.
+Arduino IDE er fleksibel i bruk, men mangler støtte for automatisk utfylling og bruk av mappestrukturer for å organisere egendefinerte biblioteker, som gjør at den ikke egner seg godt til denne typen arbeid. Den fungerer også til mer kompliserte prosjekter som går utover en enkelt skisse 
+Disse endringene i koden vil da ikke overføres til andre skisser, som kan være en god ting for å unngå følgefeil, men det fører også til problemer når jeg gjerne skulle fikset bugs i alle linjene.
+Et alternativ jeg har sett på er å bruke Visual Studio Code, med PlatformI/O som utviklingsmiljø, da den støtter mappestrukturer på en bedre måte. Problemet der er at selv om det er mye dokumentasjon, er det veldig mye å sette seg inn i for å løse det på en elegant måte som er brukervennlig for meg. Visual Studio Code er i utgangspunktet en veldig enkel editor, uten kompilering og flashing innebygget, men den har mange plugins som utvider funksjonaliteten. Dette er veldig nyttig når man vet hva man gjør, men er vanskelig å bruke uten veiledning, spesielt når man ønsker å bruke samme kode til forskjellige mikrokontrollere, som da krever forskjellige behandling i bakgrunnen for å kompilere koden riktig til de forskjellige brettene.
+Å balansere mellom å lære nye måter å sette opp arbeidsstasjonen og å få gjennomført kodeoppgaver for å gjøre klar for tester har lent tungt mot å få testene til å fungere fremfor å bygge en god, gjenbrukbar kodebase og å forstå arbeidsmiljøet for best mulig effekt. Ønsket er å ha et miljø med fleksibilitet og oversikt, men virkeligheten har vært å halse etter for å få ting til å fungere i stedet for å kunne sette seg inn i nye verktøy.
+Vi har et relativt bredt utvalg i mikrokontrollere. Arduino, Raspberry Pi og ESP32 som base. Alle tre kan programmers i C++ via Arduino sin IDE, noe som forenkler prosessen. Den samme koden kan da brukes på tvers av alle, skjønt ikke på mest effektive måte.
+De Raspberry Pi-baserte kortene har en deep sleep funksjon, men den eneste måten jeg har funnet for å benytte denne er ved å kode dem i det mikrokontrollerorienterte språket MicroPython, en lettvektsvariant av Python rettet mot mikrokontrollere. Denne vil drastisk redusere strømforbruket for mikrokontrolleren når den venter på å skulle gjøre arbeid igjen, fra 11 timer batteritid til omtrent 3000 timer batteritid [hvor kom disse tallene fra igjen?], men forutsetter at jeg lærer meg et «nytt» programmeringsspråk, og nye verktøy for å skrive koden jeg trenger. Jeg må også da undersøke om MicroPython kan brukes på tvers av mikrokontrollerne, og i så fall hvilke problemer som kan oppstå av den overgangen, annet enn tiden det tar i omstillingen av kodebasen. Det kan også vise seg at dette er en enklere måte å ordne all koden på, men det vil kun vise seg etter mer testing.
+Arduinokontrollerne vi har tilgang til opererer alle på et 5V logikknivå, i motsetning til de andre, og ser ikke ut til å ha samme mulighet for søvnfunksjoner og pauser. Det er ingen sanntidsklokke integrert i enheten, som også vanskeliggjør enkelte funksjoner for vårt formal.
+ESP32 er en veldig kraftig og anvendelig brikke, og brukes i mange integrerte systemer på grunn av denne kraften, fleksibiliteten og prisen. Den største fordelen med disse er hvor gode de er på kobling til andre enheter, både via BlueTooth, WiFi og radio. Den nette formfaktoren er også et stort pluss.
+Oppgaver
+Skal fikse første lesning er for tidlig
+Ordnet det 25.3, det holdt med 10 sek for å få cap.sens til å stabilisere seg. Dreit i cap.sens, fokus på res.sens, men ja, gjorde greia
+Done?
+Skal lese opp på arkitektur, og sette opp en
+Skal ordne koden etter arkitekturen
+Skal finne ut hvor mye tid sensorene trenger for å «varmes opp»
+Cap sens trenger et sted mellom 2 og 10 sek, kan testes mer
+Teste mer senere
+Skal lære nok til å sette brettet i deep sleep
+Skal implementere gjennomsnitt
+Skal lage skript for å hakke opp CSV-filene for analyse
+Skal sette opp for enkel fukttest over tid, med beeper
+Gjort, dokumenter
+Sattte opp binær test med en sensor, den andre og begge
+dokumentert
+Skal finne ut av Wi-Fi/Bluetooth kommunikasjon, hvordan fungerer det?
+Dokumentere hva disse er og hvordan de funker
+Dokumentere at jeg leiker med BLE
+</Text>
+        </Document>
+        <Document ID="F3A6A869-6BF9-4937-9047-4219438311C3">
+            <Title>Teknisk Copilot Utvidelse</Title>
+            <Text>Evaluering av utviklingsverktøy
+I prosjektet ble det benyttet to hovedutviklingsmiljøer i forbindelse med testing av sensorer og dataanalyse: Arduino IDE og Visual Studio Code (VSC) med PlatformIO. Dette underkapitlet redegjør for erfaringene med de to verktøyene, med særlig vekt på deres fordeler og begrensninger i forhold til organisering av kode og håndtering av konfigurasjoner for ulike mikrokontrollere.
+1. Arduino IDE
+Arduino IDE ble brukt i de tidlige fasene av prosjektet. Verktøyet bidro med enkle løsninger for å laste opp kode til mikrokontrollerne, noe som var en fordel når man skulle sette opp grunnleggende funksjonalitet. Imidlertid var det flere utfordringer som raskt ble merkbare:
+Kodeorganisering: Arduino IDE støtter ikke ut av boksen mappestrukturer som tillater inndeling av koden i separate filer. Dette fører til en fragmentert oversikt, særlig når prosjektet utvides.
+Forslag til illustrasjon:
+Figur 1: Et skjermbilde eller diagram som viser standard mappestruktur i Arduino IDE, med en visualisering av hvordan hver skisse oppbevares i egen mappe.
+Gjenbruk av moduler: Hver skisse har sin egen mappe, og egendefinerte moduler må kopieres manuelt til hver enkelt mappe. Dette medfører repetitivt arbeid, som lett kan føre til inkonsistens i vedlikehold og oppdatering.
+Forslag til illustrasjon:
+Figur 2: En tabell eller figur som sammenligner antall filer/mappestrukturer og kopierte moduler i et typisk Arduino-basert prosjekt versus et modulært oppsett.
+Disse aspektene illustrerer tydelig at mens Arduino IDE er velegnet for enklere oppgaver, møter man raskt utfordringer ved kompleksitet og skalerbarhet.
+2. Overgangen til Visual Studio Code med PlatformIO
+I et senere steg av prosjektet ble overgangen til Visual Studio Code kombinert med PlatformIO gjennomført med mål om å oppnå en mer integrert og modulær arbeidsflyt. Her ble fordelene tydeligere:
+Sentralt prosjektoppsett: Med VSC og PlatformIO er det mulig å ha alle relaterte skisser samlet i ett prosjekt. Dette forbedrer oversikten over ulike konfigurasjoner for diverse mikrokontrollere med varierende chiparkitektur, og reduserer behovet for manuell kopiering av moduler.
+Forslag til illustrasjon:
+Figur 3: Et diagram som skisserer den integrerte prosjektstrukturen, med en visualisering av hvordan ulike konfigurasjonsfiler henger sammen under ett prosjekt.
+Utvidet funksjonalitet med plugins: Selv om VSC med PlatformIO stiller høyere krav til den som er uerfaren, åpner det opp for kraftige verktøy som automatisering av byggeprosesser og en bedre integrert feilsøkingsfunksjonalitet.
+Forslag til illustrasjon:
+Figur 4: Skjermdump(er) som illustrerer eksempelvis konfigurasjonsfiler og plugins i VSC, gjerne med korte forklarende kommentarer på de mest kritiske elementene.
+Overgangen til VSC med PlatformIO viste seg å være et levedyktig alternativ når man ser på mulighetene for en fleksibel og modulær arbeidsflyt. Til tross for den bratte læringskurven, bidrar den forenklede håndteringen av flere mikrokontrollerkonfigurasjoner til en mer robust løsning på lengre sikt.</Text>
+        </Document>
+        <Document ID="FFA1AFCA-1006-4456-8980-4C68F4E7D5D0">
+            <Title>Tidslinjenotat Uke 5 Vendel</Title>
+            <Text>Hei jeg kunne trengt hjelp med å formulere tidslinjenotatene mine på en litt mer formel og akademisk måte. Mitt ansvarsområde er dataingeniør, så jeg har jobbet mye med firmwareutvikling, og IT, samt å ha stått for noe korrespondanse. Jeg vil gå gjennom uke for uke og dele notatene mine, og så kan du dele din tolkning av dem, og vi kan plukke på resultatet til det blir bra, før vi går videre til neste uke.
+Dette er uke 5
+
+Jeg har laget maler for hvordan c++ pakker, .cpp- og .h-filer, skal være lagt opp for å ha en jevn flyt i opprettelse av dem. Jeg har gått gjennom korrespondanse fra Karoline for å finne ut av hvordan å sette opp en nettside. Jeg fikk satt opp en veldig basic nettside med en om oss-seksjon, som jeg også laget, og fikk lastet det opp til domenet vi fikk utdelt.
+Jeg gikk gjennom alle typene mikrokontrollere jeg hadde å jobbe med som Thomas og Joachim kjøpte på forhånd, og fikk lastet opp enkel testkode til alle sammen.
+Fikk bekreftet med Thomas og Joachim at Plantis-enhetene skulle ha trådløs kommunikasjon med søsterenheter.
+Jeg tok også kontakt med en potensiell testbruker med god erfaring med planter, som kan hjelpe oss med å kalibrere systemet og finne forbedringsområder.
+Helt til sist ble det en retningsendring jeg må forholde meg til: Vi skal ikke lage et fullt system for plantepleie, men kun en sensorenhet som kan fortelle kunden om planten trenger mer vann eller ikke. I den forbindelse brakk vi også ut andre funksjoner i egne produkter under et kaffemøte. Jeg skisset opp mulige indikatorer for vann og lys basert på en maskot “Buddy”, kun på konseptstadiet.</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

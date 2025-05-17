@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="Roedbeta" Modified="2025-05-17 18:58:47 +0200" ModID="A158B747-AE63-4C55-910C-B310C72F8ABD">
+    <Binder>
+        <BinderItem UUID="14942515-7CE4-4D5F-8B42-45C27E603B69" Type="DraftFolder" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 12:47:48 +0200">
+            <Title>Draft</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+            <Children>
+                <BinderItem UUID="0904E05A-9DDB-4600-A16C-4F558E72EC8C" Type="Text" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 13:12:05 +0200">
+                    <Title>Teknisk Mine Korte Notater</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1773,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="F3A6A869-6BF9-4937-9047-4219438311C3" Type="Text" Created="2025-05-17 13:26:33 +0200" Modified="2025-05-17 13:27:42 +0200">
+                    <Title>Teknisk Copilot Utvidelse</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>3072,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="4101F948-1981-4D65-A7F0-9C177396F383" Type="Text" Created="2025-05-17 14:06:17 +0200" Modified="2025-05-17 14:06:50 +0200">
+                    <Title>Teknisk Copilot Utvidelse 2</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>2600,560</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="AA3924FF-26BB-4640-91CC-D4FFD1D841FE" Type="Text" Created="2025-05-17 13:28:17 +0200" Modified="2025-05-17 13:29:08 +0200">
+                    <Title>Lagret fra gamle rapportdokumentet</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>5779,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="FFA1AFCA-1006-4456-8980-4C68F4E7D5D0" Type="Text" Created="2025-05-17 17:42:32 +0200" Modified="2025-05-17 18:08:00 +0200">
+                    <Title>Tidslinjenotat Uke 5 Vendel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1605,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="1A8300DD-A26C-4F21-BE0A-C13B9DA48D27" Type="Text" Created="2025-05-17 18:17:16 +0200" Modified="2025-05-17 18:29:25 +0200">
+                    <Title>Tidslinjenotat Uke 5 Copilot</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection Caret="2022">0,2022</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+            </Children>
+        </BinderItem>
+        <BinderItem UUID="28AFD06A-0923-4633-9081-5A3CF8E6D1E6" Type="ResearchFolder" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 12:47:48 +0200">
+            <Title>Research</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+        <BinderItem UUID="805731E3-E0FE-4142-8A75-D3C410DFA4E8" Type="TrashFolder" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 12:47:48 +0200">
+            <Title>Trash</Title>
+            <MetaData>
+                <IncludeInCompile>Yes</IncludeInCompile>
+            </MetaData>
+        </BinderItem>
+    </Binder>
+    <Collections>
+        <Collection Type="Binder" ID="2864F418-92ED-4859-AE5A-60876B7352B6" Color="0.933333 0.909804 0.835294">
+            <Title>Binder</Title>
+        </Collection>
+        <Collection Type="RecentSearch" ID="A5A235A5-82AB-4EFC-AC6A-F50E0D5636CC" Color="0.819608 0.796078 0.721569">
+            <Title>Search Results</Title>
+            <SearchSettings Operator="Any" Type="All" Scope="All" CompileSetting="All" CaseSensitive="No" IgnoreDiacritics="No"></SearchSettings>
+        </Collection>
+    </Collections>
+    <SectionTypes>
+        <TypeDefinitions>
+            <Type ID="73764E4B-0D72-4753-B063-CACBADFC6BB6">Heading</Type>
+            <Type ID="46DA323C-FB08-44CA-88DF-69D73B40441B">Sub-Heading</Type>
+            <Type ID="DC57ECE8-69FA-43CB-90AE-42368E7EE56F">Section</Type>
+        </TypeDefinitions>
+        <LevelTypes>
+            <Folders>
+                <Type>73764E4B-0D72-4753-B063-CACBADFC6BB6</Type>
+            </Folders>
+            <Containers>
+                <Type>DC57ECE8-69FA-43CB-90AE-42368E7EE56F</Type>
+            </Containers>
+            <Files>
+                <Type>DC57ECE8-69FA-43CB-90AE-42368E7EE56F</Type>
+            </Files>
+        </LevelTypes>
+    </SectionTypes>
+    <LabelSettings>
+        <Title>Label</Title>
+        <DefaultLabelID>-1</DefaultLabelID>
+        <Labels>
+            <Label ID="-1">No Label</Label>
+            <Label ID="0" Color="0.993500 0.701213 0.732586">Red</Label>
+            <Label ID="1" Color="0.995422 0.790951 0.652384">Orange</Label>
+            <Label ID="2" Color="0.997726 0.892729 0.652567">Yellow</Label>
+            <Label ID="3" Color="0.715862 0.948714 0.697688">Green</Label>
+            <Label ID="4" Color="0.702312 0.888273 0.974258">Blue</Label>
+            <Label ID="5" Color="0.957565 0.766751 0.999619">Purple</Label>
+        </Labels>
+    </LabelSettings>
+    <StatusSettings>
+        <Title>Status</Title>
+        <DefaultStatusID>-1</DefaultStatusID>
+        <StatusItems>
+            <Status ID="-1">No Status</Status>
+            <Status ID="0">To Do</Status>
+            <Status ID="1">In Progress</Status>
+            <Status ID="2">First Draft</Status>
+            <Status ID="3">Revised Draft</Status>
+            <Status ID="4">Final Draft</Status>
+            <Status ID="5">Done</Status>
+        </StatusItems>
+    </StatusSettings>
+    <ProjectTargets Notify="No">
+        <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2025-05-17 12:47:48 +0200" IgnoreDeadline="Yes">0</DraftTarget>
+        <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Time" ResetTime="01:00" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
+        <PreviousSession Words="2817" Characters="18379" Date="2025-05-17 18:58:47 +0200"/>
+    </ProjectTargets>
+    <RecentWritingHistory Date="2025-05-17 00:00:00 +0200">
+        <DraftWordCount>2817</DraftWordCount>
+        <DraftCharCount>18379</DraftCharCount>
+        <OtherWordCount>0</OtherWordCount>
+        <OtherCharCount>0</OtherCharCount>
+    </RecentWritingHistory>
+    <PrintSettings PaperSize="595.0,842.0" LeftMargin="72.0" RightMargin="72.0" TopMargin="72.0" BottomMargin="72.0" PaperType="iso-a4" Orientation="Portrait" ScaleFactor="1.0" HorizontallyCentered="Yes" VerticallyCentered="Yes" Collates="No" PagesAcross="1" PagesDown="1"/>
+</ScrivenerProject>
