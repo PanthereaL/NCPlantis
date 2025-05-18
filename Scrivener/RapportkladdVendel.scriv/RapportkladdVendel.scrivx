@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="Roedbeta" Modified="2025-05-18 18:51:01 +0200" ModID="E8728108-26BB-4780-8389-AF201F6C6B4E">
+<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="DESKTOP-G5OO04D" Modified="2025-05-19 00:04:47 +0200" ModID="765C4703-6F0F-4E9C-9C17-E888A8EFCDF6">
     <Binder>
         <BinderItem UUID="14942515-7CE4-4D5F-8B42-45C27E603B69" Type="DraftFolder" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 12:47:48 +0200">
             <Title>Draft</Title>
@@ -142,13 +142,31 @@
                         <TextSelection>1036,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
-                <BinderItem UUID="AD56FF35-9CB9-4ED0-88FE-C838F237559C" Type="Text" Created="2025-05-18 15:02:39 +0200" Modified="2025-05-18 17:54:14 +0200">
+                <BinderItem UUID="AD56FF35-9CB9-4ED0-88FE-C838F237559C" Type="Text" Created="2025-05-18 15:02:39 +0200" Modified="2025-05-18 23:22:27 +0200">
                     <Title>Ok, arkitekturstuff om PlantBud</Title>
                     <MetaData>
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>1206,0</TextSelection>
+                        <TextSelection>1222,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="31C7E62E-673C-445F-8A9F-940CAC7251E7" Type="Text" Created="2025-05-18 23:24:07 +0200" Modified="2025-05-18 23:25:38 +0200">
+                    <Title>Kodens arkitektur</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>170,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="74C00D7B-7884-4B24-9F27-75E98B96306C" Type="Text" Created="2025-05-18 23:24:15 +0200" Modified="2025-05-19 00:04:43 +0200">
+                    <Title>Utvikling</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>624,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
@@ -167,10 +185,10 @@
         </BinderItem>
     </Binder>
     <Collections>
-        <Collection Type="Binder" ID="2864F418-92ED-4859-AE5A-60876B7352B6" Color="0.933333 0.909804 0.835294">
+        <Collection Type="Binder" ID="2864F418-92ED-4859-AE5A-60876B7352B6" Color="0.941176 0.937255 0.956863">
             <Title>Binder</Title>
         </Collection>
-        <Collection Type="RecentSearch" ID="A5A235A5-82AB-4EFC-AC6A-F50E0D5636CC" Color="0.819608 0.796078 0.721569">
+        <Collection Type="RecentSearch" ID="A5A235A5-82AB-4EFC-AC6A-F50E0D5636CC" Color="0.901961 0.901961 0.980392">
             <Title>Search Results</Title>
             <SearchSettings Operator="Any" Type="All" Scope="All" CompileSetting="All" CaseSensitive="No" IgnoreDiacritics="No"></SearchSettings>
         </Collection>
@@ -222,11 +240,11 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2025-05-17 12:47:48 +0200" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Time" ResetTime="01:00" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="1294" Characters="8532" Date="2025-05-18 18:51:01 +0200"/>
+        <PreviousSession Words="1474" Characters="9618" Date="2025-05-19 00:04:47 +0200"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2025-05-18 00:00:00 +0200">
-        <DraftWordCount>1294</DraftWordCount>
-        <DraftCharCount>8532</DraftCharCount>
+    <RecentWritingHistory Date="2025-05-19 00:00:00 +0200">
+        <DraftWordCount>0</DraftWordCount>
+        <DraftCharCount>1</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
         <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>

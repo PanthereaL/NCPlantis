@@ -22,6 +22,10 @@ For å hente inn et eksternt perspektiv tok jeg også kontakt med en potensiell 
 Til slutt hadde vi en større strategisk retningsendring etter veiledermøte med John. Prosjektets omfang ble justert fra å utvikle et fullstendig integrert plantepleiesystem, til å skille ut planlagt funksjonalitet i separate produkter, og fokusere på å utvikle en sensorbasert enhet. Denne enheten skal primært indikere for kunden om plantens vannbehov er tilstrekkelig dekket. I forbindelse med denne endringen, under et uformelt kaffemøte, ble det diskutert navn og funksjonelle konsepter for de forskjellige produktene. 
 Jeg utarbeidet også et konseptuelt design for vann- og lysindikatorer, illustrert med maskoten “Buddy”, som per dags dato er på konseptstadiet.</Text>
         </Document>
+        <Document ID="31C7E62E-673C-445F-8A9F-940CAC7251E7">
+            <Title>Kodens arkitektur</Title>
+            <Text>[[Jeg vet ikke hva jeg skla skrive her, jeg vet at koden har en arkitektur, men det er vanskelig å definere den. Kanskje jeg finner ut av noe når jeg skriver det andre.]]</Text>
+        </Document>
         <Document ID="35FA87DD-3570-49B9-95C4-11F701940BE0">
             <Title>Tidslinjenotat Uke 7 Copilot</Title>
             <Text>Uke 7 – Utvikling av dataloggingprototyp og batterisparetiltak for display
@@ -65,6 +69,13 @@ Et Git-repository ble opprettet på GitHub med hensiktsmessige mappestrukturer k
 Den første enkle prototypen av sensorsystemet ble implementert, og enkle baseline-målinger ga verdifull innsikt i systemets funksjonalitet, samt indikasjoner på videre muligheter for optimalisering.
 For å styrke testoppsettet med faktiske botaniske prøver ble et utvalg små planter anskaffet, og detaljerte vanningsinstruksjoner fra leverandøren ble innhentet.
 Til slutt ble det forsøkt å integrere en Raspberry Pi 3 som en potensiell NAS-server i nettverket. Dette ble imidlertid henlagt ettersom enheten ikke kunne kobles til universitetets sikrede nettverk, og de nødvendige ressursene for å etablere et separat LAN ikke var tilgjengelige.</Text>
+        </Document>
+        <Document ID="74C00D7B-7884-4B24-9F27-75E98B96306C">
+            <Title>Utvikling</Title>
+            <Text>Prosjektet har utviklet seg ofte, og gjerne i store sprang. Det første konseptet var et helintegrert system, hvor mange mindre prosesser ble styrt fra en sentral enhet. 
+Det andre konseptet fikk vi etter første veiledersamtale. Der fikk vi anbefaling om å bryte det store systemet ned i mindre biter, og hver atomiske bit ble sitt eget produkt. 
+Naturlig nok er systemarkitekturen markant forskjellig mellom disse, men en tydelig definisjon av hva denne arkitekturen var ble ikke formulert. Hva den så ut til å være endret seg ofte, og så ut til å være et svært flytende konsept. Målet flyttet seg mellom å være en fungerende MVP, og å være et ferdig, komplekst system med brede integreringsmuligheter og tilbake svært ofte, og det var enklere å fokusere på datainnsamling og utforskning av tilgjengelig hardware og tilhørende løsninger enn å jobbe mot hovedsystemets endepunkt.
+Den siste iterasjonen</Text>
         </Document>
         <Document ID="8D76C09D-583D-48D7-AAA8-FBBD7EF46C46">
             <Title>Tidslinjenotat Uke 8 Copilot</Title>
@@ -122,7 +133,8 @@ Knappene skal kunne gi input til mikrokontrolleren for å operere menyen.
 Mikrokontrolleren er i tillegg koblet til en ekstern strømkilde for å drive prosessoren og tilkoblede komponenter.
 [[Diagram som viser disse fem delene]]
 Diagrammet viser her dataflyten i enheten mellom komponentene, skjønt radioflyten er valgfri.
-Typen knapper og sensorer er i utgangspunktet likegyldig for kodens utførelse, og endringer i disse løses ved hjelp av kalibrering.</Text>
+Typen knapper og sensorer er i utgangspunktet likegyldig for kodens utførelse, og endringer i disse løses ved hjelp av kalibrering hvis nødvendig.
+</Text>
         </Document>
         <Document ID="B7AB43C1-134C-4E16-A056-7E809D522913">
             <Title>Tidslinjenotat Uke 9 Vendel</Title>
@@ -158,20 +170,16 @@ Systemet er laget for å være modulært, med frittstående komponenter som kan 
 I prosjektet ble det benyttet to hovedutviklingsmiljøer i forbindelse med testing av sensorer og dataanalyse: Arduino IDE og Visual Studio Code (VSC) med PlatformIO. Dette underkapitlet redegjør for erfaringene med de to verktøyene, med særlig vekt på deres fordeler og begrensninger i forhold til organisering av kode og håndtering av konfigurasjoner for ulike mikrokontrollere.
 1. Arduino IDE
 Arduino IDE ble brukt i de tidlige fasene av prosjektet. Verktøyet bidro med enkle løsninger for å laste opp kode til mikrokontrollerne, noe som var en fordel når man skulle sette opp grunnleggende funksjonalitet. Imidlertid var det flere utfordringer som raskt ble merkbare:
-Kodeorganisering: Arduino IDE støtter ikke ut av boksen mappestrukturer som tillater inndeling av koden i separate filer. Dette fører til en fragmentert oversikt, særlig når prosjektet utvides.
-Forslag til illustrasjon:
+Kodeorganisering: Arduino IDE støtter ikke ut av boksen mappestrukturer som tillater inndeling av koden i separate filer. Dette fører til en fragmentert oversikt, særlig når prosjektet utvides.Forslag til illustrasjon:
 Figur 1: Et skjermbilde eller diagram som viser standard mappestruktur i Arduino IDE, med en visualisering av hvordan hver skisse oppbevares i egen mappe.
-Gjenbruk av moduler: Hver skisse har sin egen mappe, og egendefinerte moduler må kopieres manuelt til hver enkelt mappe. Dette medfører repetitivt arbeid, som lett kan føre til inkonsistens i vedlikehold og oppdatering.
-Forslag til illustrasjon:
+Gjenbruk av moduler: Hver skisse har sin egen mappe, og egendefinerte moduler må kopieres manuelt til hver enkelt mappe. Dette medfører repetitivt arbeid, som lett kan føre til inkonsistens i vedlikehold og oppdatering.Forslag til illustrasjon:
 Figur 2: En tabell eller figur som sammenligner antall filer/mappestrukturer og kopierte moduler i et typisk Arduino-basert prosjekt versus et modulært oppsett.
 Disse aspektene illustrerer tydelig at mens Arduino IDE er velegnet for enklere oppgaver, møter man raskt utfordringer ved kompleksitet og skalerbarhet.
 2. Overgangen til Visual Studio Code med PlatformIO
 I et senere steg av prosjektet ble overgangen til Visual Studio Code kombinert med PlatformIO gjennomført med mål om å oppnå en mer integrert og modulær arbeidsflyt. Her ble fordelene tydeligere:
-Sentralt prosjektoppsett: Med VSC og PlatformIO er det mulig å ha alle relaterte skisser samlet i ett prosjekt. Dette forbedrer oversikten over ulike konfigurasjoner for diverse mikrokontrollere med varierende chiparkitektur, og reduserer behovet for manuell kopiering av moduler.
-Forslag til illustrasjon:
+Sentralt prosjektoppsett: Med VSC og PlatformIO er det mulig å ha alle relaterte skisser samlet i ett prosjekt. Dette forbedrer oversikten over ulike konfigurasjoner for diverse mikrokontrollere med varierende chiparkitektur, og reduserer behovet for manuell kopiering av moduler.Forslag til illustrasjon:
 Figur 3: Et diagram som skisserer den integrerte prosjektstrukturen, med en visualisering av hvordan ulike konfigurasjonsfiler henger sammen under ett prosjekt.
-Utvidet funksjonalitet med plugins: Selv om VSC med PlatformIO stiller høyere krav til den som er uerfaren, åpner det opp for kraftige verktøy som automatisering av byggeprosesser og en bedre integrert feilsøkingsfunksjonalitet.
-Forslag til illustrasjon:
+Utvidet funksjonalitet med plugins: Selv om VSC med PlatformIO stiller høyere krav til den som er uerfaren, åpner det opp for kraftige verktøy som automatisering av byggeprosesser og en bedre integrert feilsøkingsfunksjonalitet.Forslag til illustrasjon:
 Figur 4: Skjermdump(er) som illustrerer eksempelvis konfigurasjonsfiler og plugins i VSC, gjerne med korte forklarende kommentarer på de mest kritiske elementene.
 Overgangen til VSC med PlatformIO viste seg å være et levedyktig alternativ når man ser på mulighetene for en fleksibel og modulær arbeidsflyt. Til tross for den bratte læringskurven, bidrar den forenklede håndteringen av flere mikrokontrollerkonfigurasjoner til en mer robust løsning på lengre sikt.</Text>
         </Document>
