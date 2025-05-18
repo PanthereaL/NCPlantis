@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="Roedbeta" Modified="2025-05-17 18:58:47 +0200" ModID="A158B747-AE63-4C55-910C-B310C72F8ABD">
+<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="Roedbeta" Modified="2025-05-18 18:51:01 +0200" ModID="E8728108-26BB-4780-8389-AF201F6C6B4E">
     <Binder>
         <BinderItem UUID="14942515-7CE4-4D5F-8B42-45C27E603B69" Type="DraftFolder" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 12:47:48 +0200">
             <Title>Draft</Title>
@@ -59,6 +59,96 @@
                     </MetaData>
                     <TextSettings>
                         <TextSelection Caret="2022">0,2022</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="FBB7AE46-C7C9-4B36-A811-BC60144B02B1" Type="Text" Created="2025-05-18 10:16:50 +0200" Modified="2025-05-18 10:46:15 +0200">
+                    <Title>Tidslinjenotat Uke 6 Vendel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1123,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="5CEB9F6F-050E-4C60-B687-F3AB2B0000AF" Type="Text" Created="2025-05-18 11:07:31 +0200" Modified="2025-05-18 11:51:48 +0200">
+                    <Title>Tidslinjenotat Uke 6 Copilot</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>92,1365</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="3D472A1F-886A-4C90-9D8F-2F78C7880EE2" Type="Text" Created="2025-05-18 11:09:49 +0200" Modified="2025-05-18 11:20:13 +0200">
+                    <Title>Tidslinjenotat Uke 7 Vendel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>501,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="35FA87DD-3570-49B9-95C4-11F701940BE0" Type="Text" Created="2025-05-18 11:24:26 +0200" Modified="2025-05-18 11:27:38 +0200">
+                    <Title>Tidslinjenotat Uke 7 Copilot</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>75,661</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="E33EB514-FEA9-4CCC-BEC6-67177248147B" Type="Text" Created="2025-05-18 11:29:09 +0200" Modified="2025-05-18 11:33:48 +0200">
+                    <Title>Tidslinjenotat Uke 8 Vendel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>440,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="8D76C09D-583D-48D7-AAA8-FBBD7EF46C46" Type="Text" Created="2025-05-18 11:35:01 +0200" Modified="2025-05-18 11:56:11 +0200">
+                    <Title>Tidslinjenotat Uke 8 Copilot</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>113,721</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="B7AB43C1-134C-4E16-A056-7E809D522913" Type="Text" Created="2025-05-18 11:36:24 +0200" Modified="2025-05-18 12:04:47 +0200">
+                    <Title>Tidslinjenotat Uke 9 Vendel</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>514,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="DFEFB665-BE09-4CFD-B6E1-53A1DEA7E57D" Type="Text" Created="2025-05-18 12:05:03 +0200" Modified="2025-05-18 12:08:09 +0200">
+                    <Title>Tidslinjenotat Uke 9 Copilot</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>685,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="F066F692-428C-4AD4-A498-F4C3E2DC3BE5" Type="Text" Created="2025-05-18 12:38:01 +0200" Modified="2025-05-18 14:56:00 +0200">
+                    <Title>Arkitektur spy</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1036,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="AD56FF35-9CB9-4ED0-88FE-C838F237559C" Type="Text" Created="2025-05-18 15:02:39 +0200" Modified="2025-05-18 17:54:14 +0200">
+                    <Title>Ok, arkitekturstuff om PlantBud</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1206,0</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
@@ -132,11 +222,11 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2025-05-17 12:47:48 +0200" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Time" ResetTime="01:00" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="2817" Characters="18379" Date="2025-05-17 18:58:47 +0200"/>
+        <PreviousSession Words="1294" Characters="8532" Date="2025-05-18 18:51:01 +0200"/>
     </ProjectTargets>
-    <RecentWritingHistory Date="2025-05-17 00:00:00 +0200">
-        <DraftWordCount>2817</DraftWordCount>
-        <DraftCharCount>18379</DraftCharCount>
+    <RecentWritingHistory Date="2025-05-18 00:00:00 +0200">
+        <DraftWordCount>1294</DraftWordCount>
+        <DraftCharCount>8532</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
         <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>

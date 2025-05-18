@@ -22,6 +22,18 @@ For å hente inn et eksternt perspektiv tok jeg også kontakt med en potensiell 
 Til slutt hadde vi en større strategisk retningsendring etter veiledermøte med John. Prosjektets omfang ble justert fra å utvikle et fullstendig integrert plantepleiesystem, til å skille ut planlagt funksjonalitet i separate produkter, og fokusere på å utvikle en sensorbasert enhet. Denne enheten skal primært indikere for kunden om plantens vannbehov er tilstrekkelig dekket. I forbindelse med denne endringen, under et uformelt kaffemøte, ble det diskutert navn og funksjonelle konsepter for de forskjellige produktene. 
 Jeg utarbeidet også et konseptuelt design for vann- og lysindikatorer, illustrert med maskoten “Buddy”, som per dags dato er på konseptstadiet.</Text>
         </Document>
+        <Document ID="35FA87DD-3570-49B9-95C4-11F701940BE0">
+            <Title>Tidslinjenotat Uke 7 Copilot</Title>
+            <Text>Uke 7 – Utvikling av dataloggingprototyp og batterisparetiltak for display
+I løpet av denne uken ble en metode for datalogging koseptualisert, med integrert funksjonalitet for å registrere målte data. Utformingen demonstrerte imidlertid et teknisk aspekt: Raspberry Pi 3 håndterer ikke analog input på GPIO-pinnene. For å sikre lagring av analoge måleverdier i en fil, er det muligens et behov for å kombinere RPi3 med en mikrokontroller som støtter analog input.
+I mellomtiden ble det etablert en måleprototyp som sender utdata til en tilknyttet skjerm, slik at data kan avleses manuelt. For å optimalisere batteriforbruket, er skjermens aktivering styrt ved knappetrykk, noe som reduserer energiforbruk under perioder med inaktivitet.</Text>
+        </Document>
+        <Document ID="3D472A1F-886A-4C90-9D8F-2F78C7880EE2">
+            <Title>Tidslinjenotat Uke 7 Vendel</Title>
+            <Text>Nydelig, takk! Fortsett gjerne sånn. Da kan vi gå videre til uke 7:
+Jeg skisset opp en prototyp som også kan loggføre dataene den måler. Desverre håndterer ikke RPi3 (Raspberry Pi 3) analog input på GPIO-pinnene, så jeg tror jeg trenger å koble sammen den og en mikrokontroller med analog input for å kunne loggføre dataene i en fil.
+Jeg fikk imidlertid satt opp en måleprototyp som kan sende output-en sin til skjerm så vi kan lese av manuelt, med skjermen kun på ved knappetrykk for å spare batteri.</Text>
+        </Document>
         <Document ID="4101F948-1981-4D65-A7F0-9C177396F383">
             <Title>Teknisk Copilot Utvidelse 2</Title>
             <Text>Evaluering av Mikrokontrollere
@@ -43,6 +55,22 @@ Forslag til illustrasjon:
 Figur 5: Et diagram over ESP32 sin arkitektur med fremheving av de kommunikasjonsmodulene som gjør den egnet for tilkoblingsoppgaver (f.eks. BlueTooth, WiFi, radio).
 Figur 6: En sammenligningstabell som visualiserer de viktigste tekniske egenskapene (tilkoblingsmuligheter, formfaktor, ytelse) på tvers av ESP32, Arduino og Raspberry Pi-baserte enheter. 
 Denne evalueringen understreker at til tross for initial forenkling ved bruk av et felles programmeringsmiljø (C++ med Arduino IDE), krever de ulike mikrokontrollerne tilpassede strategier for optimal bruk. Ved å benytte MicroPython for Raspberry Pi-baserte enheter åpnes for betydelige strømsparegevinster, men samtidig innføres nye krav til opplæring og verktøytilpasning. Arduino-kontrollerne, med sine begrensninger, utfordrer designet imot løsninger for tidsstyrte funksjoner, mens ESP32 med sine omfattende kommunikasjonsmuligheter står frem som en kraftig og allsidig plattform.</Text>
+        </Document>
+        <Document ID="5CEB9F6F-050E-4C60-B687-F3AB2B0000AF">
+            <Title>Tidslinjenotat Uke 6 Copilot</Title>
+            <Text>Uke 6 – Etablering av datastrukturer, Git-arkitektur, prototyping og nettverksinfrastruktur
+I denne uken ble det etablert databaser for å systematisere og holde oversikt over prosjektkrav, testprosedyrer, arbeidsoppgaver, inventar og plantedata for å bidra til strukturert informasjonsforvaltning og økt sporbarhet i prosjektarbeidet.
+Alternativer for fildeling ble også vurdert, særlig for de filtypene som er utfordrende å bruke med Teams. En NAS-løsning ble undersøkt med mål om å tilby et sentralisert lagringssted for kode, tilgang til databaser og sikre backups, for å styrke interne samarbeidsrutiner.
+Et Git-repository ble opprettet på GitHub med hensiktsmessige mappestrukturer kompatible med den benyttede IDE-en, noe som legger grunnlaget for en smidig arbeidsflyt og standardiserte utviklingsprosesser.
+Den første enkle prototypen av sensorsystemet ble implementert, og enkle baseline-målinger ga verdifull innsikt i systemets funksjonalitet, samt indikasjoner på videre muligheter for optimalisering.
+For å styrke testoppsettet med faktiske botaniske prøver ble et utvalg små planter anskaffet, og detaljerte vanningsinstruksjoner fra leverandøren ble innhentet.
+Til slutt ble det forsøkt å integrere en Raspberry Pi 3 som en potensiell NAS-server i nettverket. Dette ble imidlertid henlagt ettersom enheten ikke kunne kobles til universitetets sikrede nettverk, og de nødvendige ressursene for å etablere et separat LAN ikke var tilgjengelige.</Text>
+        </Document>
+        <Document ID="8D76C09D-583D-48D7-AAA8-FBBD7EF46C46">
+            <Title>Tidslinjenotat Uke 8 Copilot</Title>
+            <Text>Uke 8 – Eksperimentell evaluering av lyssensitive motstander og implementering av direkte SPI-basert datalogging
+Denne uken var preget av uforutsette personlige omstendigheter, noe som medførte redusert arbeidsfokus. Til tross for dette ble det gjennomført eksperimenter rettet mot evaluering av lyssensitive motstander. I denne sammenhengen ble en prototype utviklet for å teste responsen til disse komponentene under varierende lysforhold.
+Videre ble en alternativ metode for datalogging implementert, som eliminerer behovet for å knytte sammen en mikrokontroller med Raspberry Pi 3. Løsningen benytter et SD-kort som kobles direkte til SPI-pinnene på testens mikrokontroller, uten bruk av en separat SD-modul eller datamaskin. Denne tilnærmingen kan potensielt forenkle systemets arkitektur og redusere antall eksterne komponenter.</Text>
         </Document>
         <Document ID="AA3924FF-26BB-4640-91CC-D4FFD1D841FE">
             <Title>Lagret fra gamle rapportdokumentet</Title>
@@ -78,6 +106,52 @@ Dokumentere hva disse er og hvordan de funker
 Dokumentere at jeg leiker med BLE
 </Text>
         </Document>
+        <Document ID="AD56FF35-9CB9-4ED0-88FE-C838F237559C">
+            <Title>Ok, arkitekturstuff om PlantBud</Title>
+            <Text>PlantBud er sensorenheten vi har utviklet gjennom dette prosjektet. Dens hovedoppgaver er å måle fukt i jorden, og lysforholdene for planten den står i. Den skal også kunne sende disse dataene til parede enheter, og til et større nettverk, eller operere selvstendig.
+Den består derfor av fem hovedkomponenter:
+* Fuktsensor
+* Lyssensor
+* Radiomodul
+* Mikrokontroller
+* Knapper
+I fremtidige design ønsker vi å integrere disse tettere enn vi kunne i denne utviklings- og prototypeprosessen, men de samme grunnkomponentene og deres samhandling vil være der.
+Sensorene sender analoge signaler som korresponderer med fuktnivå målt med kapasitans, og lysnivå.
+Radiomodulen vi har brukt, NRF24L01 fungerer over Serial Peripheral Interface med mikrokontrolleren.
+Knappene skal kunne gi input til mikrokontrolleren for å operere menyen.
+Mikrokontrolleren er i tillegg koblet til en ekstern strømkilde for å drive prosessoren og tilkoblede komponenter.
+[[Diagram som viser disse fem delene]]
+Diagrammet viser her dataflyten i enheten mellom komponentene, skjønt radioflyten er valgfri.
+Typen knapper og sensorer er i utgangspunktet likegyldig for kodens utførelse, og endringer i disse løses ved hjelp av kalibrering.</Text>
+        </Document>
+        <Document ID="B7AB43C1-134C-4E16-A056-7E809D522913">
+            <Title>Tidslinjenotat Uke 9 Vendel</Title>
+            <Text>Nei, det holder fint, dette er en grov oversikt bare, utdyping kan vi eventuelt ta senere. Nå må jeg bare få alt ned så det blir klart til i kveld. Vi har ikke så mye tid. Men da kan vi ta for oss uke 9:
+
+Denne uka hentet jeg ned datablader for de forskjellige mikrokontrollerne, og smått begynt på rapportskriving.
+Jeg leste meg opp på CSV-format for å skrive loggfilene på en hensiktsmessig måte, og begynte å implementere koden for lyssensortesten.
+Tekniske problemer med tilgang til Git-repoet ble også fikset.</Text>
+        </Document>
+        <Document ID="DFEFB665-BE09-4CFD-B6E1-53A1DEA7E57D">
+            <Title>Tidslinjenotat Uke 9 Copilot</Title>
+            <Text>Uke 9 – Teknisk dokumentasjon, implementering av loggsystem for lyssensorer og Git-tilgang
+Denne uken ble datablader for de ulike mikrokontrollerne hentet ned for å styrke den tekniske dokumentasjonen og forståelsen av systemkomponentene, samt for oppslag av spesifikk informasjon som pinout-diagrammer. Rapportskriving ble også utvidet til å inkludere teknisk dataarbeid.
+Videre ble CSV-formatet studert for å etablere en hensiktsmessig metode for strukturell logging av data. Denne innsikten la grunnlaget for implementeringen av koden for lyssensortesten, der loggfiler nå produseres i CSV-format.
+Til sist ble det rettet tekniske problemer knyttet til tilgang til Git-repositoryet.</Text>
+        </Document>
+        <Document ID="E33EB514-FEA9-4CCC-BEC6-67177248147B">
+            <Title>Tidslinjenotat Uke 8 Vendel</Title>
+            <Text>Det fungerer, takk. Da kan vi ta for oss uke 8. Jeg vet ikke om det er så mye å si dog. Denne uka ble farfaren min syk og døde, så jeg var av forståelige grunner rimelig distrahert. Men jeg fikk skisset opp en prototyp for en test av lyssensitive resistorer, og fant en måte å loggføre data på som ikke krever å knytte sammen en mikrokontroller til RPi3, jeg kunne bruke et SD-kort koblet direkte på pinnene over SPI, uten en egen SD-modul.</Text>
+        </Document>
+        <Document ID="F066F692-428C-4AD4-A498-F4C3E2DC3BE5">
+            <Title>Arkitektur spy</Title>
+            <Text>Arkitekturen for systemet, og dermed også dataelementene av det, har endret seg flere ganger gjennom prosjekttiden. Fra et komplett, fastkoblet system for plantepleie til frittstående moduler med særegne oppgaver. Det er derfor utfordrende å gi én enkel oversikt over arkitekturen fra start til slutt.
+Arkitekturen som gjelder per dags dato, for videre utvikling er som følger:
+[[Diagram over hvordan PlantBud, Plantara og en smarttelefon henger sammen.]]
+PlantBud, sensorenheten, skal kunne sende instrukser til Plantara, vanningsenheten, for å få denne til å vanne planten, og motta informasjon om vannivå og om at instruksen er mottatt og gjennomført, dersom denne er satt opp.
+PlantBud skal også ha tilkobling til WiFi for å kunne kommunisere med brukerens smarttelefon via medfølgende app, dersom brukeren har en satt opp.
+Systemet er laget for å være modulært, med frittstående komponenter som kan brukes uten hverandre. Plantara og PlantBud, og fremtidige tilleggsmoduler, er derfor ment å fungere både sammenkoblet og enkeltvis.</Text>
+        </Document>
         <Document ID="F3A6A869-6BF9-4937-9047-4219438311C3">
             <Title>Teknisk Copilot Utvidelse</Title>
             <Text>Evaluering av utviklingsverktøy
@@ -100,6 +174,17 @@ Utvidet funksjonalitet med plugins: Selv om VSC med PlatformIO stiller høyere k
 Forslag til illustrasjon:
 Figur 4: Skjermdump(er) som illustrerer eksempelvis konfigurasjonsfiler og plugins i VSC, gjerne med korte forklarende kommentarer på de mest kritiske elementene.
 Overgangen til VSC med PlatformIO viste seg å være et levedyktig alternativ når man ser på mulighetene for en fleksibel og modulær arbeidsflyt. Til tross for den bratte læringskurven, bidrar den forenklede håndteringen av flere mikrokontrollerkonfigurasjoner til en mer robust løsning på lengre sikt.</Text>
+        </Document>
+        <Document ID="FBB7AE46-C7C9-4B36-A811-BC60144B02B1">
+            <Title>Tidslinjenotat Uke 6 Vendel</Title>
+            <Text>Det ble veldig bra, takk! Jeg måtte gå over et par formuleringer som var litt overdrevne, men dette kan jeg absolutt jobbe videre med. Da er vi klare for uke 6:
+
+Denne uka har jeg satt opp diverse databaser for å holde styr på krav og tester, oppgaver, inventar og plantedata.
+Jeg så på NAS som en måte å dele filer med resten av gruppa som gjør seg dårlig på Teams, som for eksempel kode, eller tilgang på databasene, og et sted å ta trygge backups.
+Jeg fikk satt opp et git repo på GitHub for å holde på aktivt brukt kode i brukbare mappestrukturer som IDE-en kan arbeide med.
+Jeg satte opp den første enkle prototypen med sensor, og fikk et par baseline-målinger.
+Jeg kjøpte også inn noen små planter til å teste på, og fikk instruksjoner om hvordan de skulle vannes fra selgeren.
+Jeg prøvde å koble opp en Raspberry Pi 3, en mikrodatamaskin i motsetning til mikrokontrollerne vi bruker i prosjektet, til nettverket for å være NAS-server for oss, men det måtte jeg gi opp da den ikke kunne kobles på universitetets sikrede nettverk, og vi ikke har resursene til å sette opp vårt eget LAN for å få denne funksjonaliteten.</Text>
         </Document>
         <Document ID="FFA1AFCA-1006-4456-8980-4C68F4E7D5D0">
             <Title>Tidslinjenotat Uke 5 Vendel</Title>

@@ -1,0 +1,19 @@
+{\rtf1\ansi\ansicpg1252\uc1\deff0
+{\fonttbl{\f0\fmodern\fcharset0\fprq2 SitkaText;}}
+{\colortbl;\red0\green0\blue0;\red255\green255\blue255;\red128\green128\blue128;}
+\paperw12240\paperh15840\margl1800\margr1800\margt1440\margb1440\f0\fs24\cf0
+\pard\plain \tx0\tx360\tx720\tx1080\tx1440\tx1800\tx2160\tx2880\tx3600\tx4320\fi360\ltrch\loch {\f0\fs24\b0\i0 PlantBud er sensorenheten vi har utviklet gjennom dette prosjektet. Dens hovedoppgaver er \loch\af0\hich\af0\dbch\af0\uc1\u229\'E5 m\u229\'E5le fukt i jorden, og lysforholdene for planten den st\u229\'E5r i. Den skal ogs\u229\'E5 kunne sende disse dataene til parede enheter, og til et st\u248\'F8rre nettverk, eller operere selvstendig.}
+\par\plain {\f0\fs24\b0\i0 Den best\loch\af0\hich\af0\dbch\af0\uc1\u229\'E5r derfor av fem hovedkomponenter:}
+\par\plain {\f0\fs24\b0\i0 * Fuktsensor}
+\par\plain {\f0\fs24\b0\i0 * Lyssensor}
+\par\plain {\f0\fs24\b0\i0 * Radiomodul}
+\par\plain {\f0\fs24\b0\i0 * Mikrokontroller}
+\par\plain {\f0\fs24\b0\i0 * Knapper}
+\par\plain {\f0\fs24\b0\i0 I fremtidige design \loch\af0\hich\af0\dbch\af0\uc1\u248\'F8nsker vi \u229\'E5 integrere disse tettere enn vi kunne i denne utviklings- og prototypeprosessen, men de samme grunnkomponentene og deres samhandling vil v\u230\'E6re der.}
+\par\plain {\f0\fs24\b0\i0 Sensorene sender analoge signaler som korresponderer med fuktniv\loch\af0\hich\af0\dbch\af0\uc1\u229\'E5 m\u229\'E5lt med kapasitans, og lysniv\u229\'E5.}
+\par\plain {\f0\fs24\b0\i0 Radiomodulen vi har brukt, NRF24L01 fungerer over Serial Peripheral Interface med mikrokontrolleren.}
+\par\plain {\f0\fs24\b0\i0 Knappene skal kunne gi input til mikrokontrolleren for \loch\af0\hich\af0\dbch\af0\uc1\u229\'E5 operere menyen.}
+\par\plain {\f0\fs24\b0\i0 Mikrokontrolleren er i tillegg koblet til en ekstern str\loch\af0\hich\af0\dbch\af0\uc1\u248\'F8mkilde for \u229\'E5 drive prosessoren og tilkoblede komponenter.}
+\par\plain {\f0\fs24\b0\i0 [[Diagram som viser disse fem delene]]}
+\par\plain {\f0\fs24\b0\i0 Diagrammet viser her dataflyten i enheten mellom komponentene, skj\loch\af0\hich\af0\dbch\af0\uc1\u248\'F8nt radioflyten er valgfri.}
+\par\plain {\f0\fs24\b0\i0 Typen knapper og sensorer er i utgangspunktet likegyldig for kodens utf\loch\af0\hich\af0\dbch\af0\uc1\u248\'F8relse, og endringer i disse l\u248\'F8ses ved hjelp av kalibrering.}}
