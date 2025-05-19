@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="DESKTOP-G5OO04D" Modified="2025-05-19 00:04:47 +0200" ModID="765C4703-6F0F-4E9C-9C17-E888A8EFCDF6">
+<ScrivenerProject Template="No" Version="2.0" Identifier="43E47F37-53C0-4D35-9CBA-89AF67532443" Creator="SCRWIN-3.1.5.1" Device="Roedbeta" Modified="2025-05-19 23:21:25 +0200" ModID="F88BF737-E4F1-4F18-88C5-6521315D870D">
     <Binder>
         <BinderItem UUID="14942515-7CE4-4D5F-8B42-45C27E603B69" Type="DraftFolder" Created="2025-05-17 12:47:48 +0200" Modified="2025-05-17 12:47:48 +0200">
             <Title>Draft</Title>
@@ -166,7 +166,25 @@
                         <IncludeInCompile>Yes</IncludeInCompile>
                     </MetaData>
                     <TextSettings>
-                        <TextSelection>624,0</TextSelection>
+                        <TextSelection>900,0</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="0882FD92-4CD3-4C24-8CEF-06A9A1945BE1" Type="Text" Created="2025-05-19 11:27:42 +0200" Modified="2025-05-19 11:29:19 +0200">
+                    <Title>Utviklingstinærming</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>1909,958</TextSelection>
+                    </TextSettings>
+                </BinderItem>
+                <BinderItem UUID="E0379C2C-79D1-4829-AA45-8586AB9BAAD1" Type="Text" Created="2025-05-19 12:18:28 +0200" Modified="2025-05-19 23:21:01 +0200">
+                    <Title>Innledning</Title>
+                    <MetaData>
+                        <IncludeInCompile>Yes</IncludeInCompile>
+                    </MetaData>
+                    <TextSettings>
+                        <TextSelection>0,866</TextSelection>
                     </TextSettings>
                 </BinderItem>
             </Children>
@@ -185,10 +203,10 @@
         </BinderItem>
     </Binder>
     <Collections>
-        <Collection Type="Binder" ID="2864F418-92ED-4859-AE5A-60876B7352B6" Color="0.941176 0.937255 0.956863">
+        <Collection Type="Binder" ID="2864F418-92ED-4859-AE5A-60876B7352B6" Color="0.933333 0.909804 0.835294">
             <Title>Binder</Title>
         </Collection>
-        <Collection Type="RecentSearch" ID="A5A235A5-82AB-4EFC-AC6A-F50E0D5636CC" Color="0.901961 0.901961 0.980392">
+        <Collection Type="RecentSearch" ID="A5A235A5-82AB-4EFC-AC6A-F50E0D5636CC" Color="0.819608 0.796078 0.721569">
             <Title>Search Results</Title>
             <SearchSettings Operator="Any" Type="All" Scope="All" CompileSetting="All" CaseSensitive="No" IgnoreDiacritics="No"></SearchSettings>
         </Collection>
@@ -240,11 +258,11 @@
     <ProjectTargets Notify="No">
         <DraftTarget Type="Words" CountIncludedOnly="Yes" CurrentCompileGroupOnly="No" Deadline="2025-05-17 12:47:48 +0200" IgnoreDeadline="Yes">0</DraftTarget>
         <SessionTarget Type="Words" CountDraftOnly="No" AllowNegatives="Yes" ResetType="Time" ResetTime="01:00" DeterminedFromDeadline="No" CanWriteOnDeadlineDate="Yes" WritingDays="">0</SessionTarget>
-        <PreviousSession Words="1474" Characters="9618" Date="2025-05-19 00:04:47 +0200"/>
+        <PreviousSession Words="546" Characters="3734" Date="2025-05-19 23:21:25 +0200"/>
     </ProjectTargets>
     <RecentWritingHistory Date="2025-05-19 00:00:00 +0200">
-        <DraftWordCount>0</DraftWordCount>
-        <DraftCharCount>1</DraftCharCount>
+        <DraftWordCount>546</DraftWordCount>
+        <DraftCharCount>3735</DraftCharCount>
         <OtherWordCount>0</OtherWordCount>
         <OtherCharCount>0</OtherCharCount>
     </RecentWritingHistory>

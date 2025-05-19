@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SearchIndexes Version="1.0">
     <Documents>
+        <Document ID="0882FD92-4CD3-4C24-8CEF-06A9A1945BE1">
+            <Title>Utviklingstinærming</Title>
+            <Text>Systemet
+Kodens arkitektur avhenger av selve systemets arkitektur. Skjønt planten og brukeren har bestått som faste elementer i systemarkitekturen, har selve systemets arkitektur endret seg gjennom prosjektperioden, til slutt representert ved PlantBud.
+PlantBud som system interfacer med jorda den står i, lysforholdene i rommet, brukerens input, og har mulighet for å kobles til andre enheter i samme økosystem.
+#
+Utviklingstinærming
+Koden ble utviklet med utgangspunkt i funksjonell oppførsel, med en imperativ tilnærming til oppbygningen av koden. Med forståelse av at det var mye tilgjengelig overhead i prosesseringskraften og tidsstyringen, var det lite grunn til å arbeide med samtidighet i dette prosjektet. 
+Etter at ønsket oppførsel var definert, kunne den skisses opp i abstrakte instrukser i naturlig språk og pseudokode, hvor hver instruks kunne implementeres for seg.
+I denne prosessen dukket prosedyrer og enkle objekt-nære strukturer opp organisk, som kunne innkapsles og abstraheres ut for å gjøre koden mer lettlest og vedlikeholdbar.
+En fordel med denne tilnærmingen er at implementering og verifisering kan komme på et tidlig tidspunkt i prosessen, og egner seg godt til en agil arbeidsmodell der systemet skal endres på kort varsel, og gir også verdifull tilbakemelding om hva som fungerer og ikke, og hvordan.
+Et problem med denne tilnærmingen er at selv om den har en tydelig oversiktsplan som er lett å justere, vil mellomstadier av prosessen være relativt kaotiske og med stor fare for underdokumentering.
+Et annet er at selv om oversiktsplanen tillater oppgavedeling, risikerer man at 
+Den fungerer for førstegangsutvikling og utforskning, og for små prosjekt med få avhengigheter, men egner seg dårlig til vedlikehold av eksisterende kode. Overgang til et proseduralt, funksjonelt eller objektorientert paradigme i sluttfasen av et utviklingsprosjekt er å anbefale.
+Kodens struktur
+Koden er strukturert som ett stort prosjekt i PlatformIO, dette for å passe på at alle moduler har riktig tilgang til biblioteker og egendefinerte pakker. Platformio.ini holder orden på hvilke brett og biblioteker de forskjellige endepunktene bruker, og tillater mange forskjellige main.cpp-filer, en for hver versjon uten konflikter, som alle har tilgang på de samme egendefinerte pakkene.
+På grunn av innenfra-og-ut perspektivet i den imperative og funksjonsbaserte tilnærmingen har de fleste filene få dependencies, med prosedyrer og strukturer representert inne i main, utenom biblioteker hentet inn utenfra.
+De abstraherte og innkapslede prosedyrene og strukturene har blitt definert med et fokus på enkle grensesnitt. Med organisk fremvokste strukturer er ofte dette et problem, siden strukturene er skreddersydde til den spesifikke løsningen, men for vedlikehold er det viktig med dokumentasjon og klare grensesnitt for å forenkle bruk og modularitet.
+</Text>
+        </Document>
         <Document ID="0904E05A-9DDB-4600-A16C-4F558E72EC8C">
             <Title>Teknisk Mine Korte Notater</Title>
             <Text>Teknisk utført arbeid har stort sett vært å legge til rette for tester av sensorer og analysere dataene. Mye tid har gått til å bli venn med verktøy som Arduino IDE og VSC, finne ut av hvordan de forskjellige mikrokontrollerne våre fungerer, og å utforske måter å forbedre arbeidsflyten.
@@ -150,6 +170,14 @@ Tekniske problemer med tilgang til Git-repoet ble også fikset.</Text>
 Denne uken ble datablader for de ulike mikrokontrollerne hentet ned for å styrke den tekniske dokumentasjonen og forståelsen av systemkomponentene, samt for oppslag av spesifikk informasjon som pinout-diagrammer. Rapportskriving ble også utvidet til å inkludere teknisk dataarbeid.
 Videre ble CSV-formatet studert for å etablere en hensiktsmessig metode for strukturell logging av data. Denne innsikten la grunnlaget for implementeringen av koden for lyssensortesten, der loggfiler nå produseres i CSV-format.
 Til sist ble det rettet tekniske problemer knyttet til tilgang til Git-repositoryet.</Text>
+        </Document>
+        <Document ID="E0379C2C-79D1-4829-AA45-8586AB9BAAD1">
+            <Title>Innledning</Title>
+            <Text>Dette bachelorprosjektet har blitt gjennomført som en studentbedrift drevet av Thomas Frimann, Joachim Rekdal og Sondre Grimnes, med Vendel Kjeldsberg og San-Luis Truong Do som ansatte.
+Målet med prosjektet har vært å fortsette arbeidet fra entrepenørskap-faget, ved å bygge opp en levedyktig bedrift og et markedsrelevant produkt for å forbedre kundens levevilkår ved å forenkle plantepleie og hjemmedyrking i mindre skala.
+Dette har vi gjennomført ved å gjøre grundig markedsanalyse og utforsking av muligheter for innhenting av kapital, utforskning av nåværende løsninger, og design og utvikling av et system som oppfyller kravene satt av studentbedriftens ledelse.
+Løsningen er utviklet med fokus på kundens behov, og planters grunnleggende behov: en balanse av lys, vann og næring.
+Målet er at kunden skal kunne nyte grønne planter, uten å behøve grønne fingre.</Text>
         </Document>
         <Document ID="E33EB514-FEA9-4CCC-BEC6-67177248147B">
             <Title>Tidslinjenotat Uke 8 Vendel</Title>
