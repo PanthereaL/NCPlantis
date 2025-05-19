@@ -42,10 +42,15 @@ bool newInstructions = false;
 uint16_t currTime;
 
 // put function declarations here:
+//Functions that handle sensor readings
 int readMoisture(int enable, int read);
 int readLight(int enable, int read);
+
+//Procedures that handle radio
 void radioInit(const byte addr[6]);
 bool radioSend(std::string text);
+
+//Procedures concerning user interaction
 void menuStart(Plant plant);
 void inputControl(Plant plant);
 void outputStart(Plant plant);
